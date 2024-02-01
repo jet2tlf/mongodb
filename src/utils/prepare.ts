@@ -1,21 +1,24 @@
-import { ObjectId } from "mongodb"
+import { ObjectId } from "mongodb";
 
-export function prepare(input: any) {
-    if (!input) return {}
+export function prepareObject(input: any): any {
+    if (!input) return {};
 
-    let output: Record<string, any> = {}
+    let output: any = [];
 
     if (Array.isArray(input)) {
-        input.forEach((item, index) => {
-            output[item] = index
-        })
+        input.forEach((item: any, index: number) => {
+            output[index] = item;
+        });
     } else if (typeof input === "object") {
         if (input._id) {
-            output = { ...input, _id: new ObjectId(input._id) }
+            output = {
+                ...input,
+                _id: new ObjectId(input._id)
+            };
         } else {
-            output = { ...input }
+            output = { ...input };
         }
     }
 
-    return output
+    return output;
 }
