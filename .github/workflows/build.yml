@@ -10,9 +10,10 @@ permissions:
   contents: read
 
 jobs:
-  - uses: actions/checkout@v4
-  - uses: actions/setup-node@v4
-    with:
-      node-version: 18
-  run: yarn
-  run: yarn build
+  build:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 18
+    run: yarn
+    run: yarn build
