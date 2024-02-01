@@ -24,7 +24,7 @@ jobs:
           cd ./temp && zip -r ../mongodb.zip ./mongodb
 
       - name: Save the build
-        uses: actions/upload-artifact@main
+        uses: actions/upload-artifact@v2
         with:
           name: mongodb
           path: mongodb.zip
