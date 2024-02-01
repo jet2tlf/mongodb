@@ -13,11 +13,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Install archive tools
-        uses: sudo apt install zip
-
       - name: Bundle files
         run: |
+          sudo apt install zip
           mkdir -p ./temp/mongodb
           cp ./{LICENSE,README.md,fxmanifest.lua} ./temp/mongodb
           cp -r ./dist ./temp/mongodb
