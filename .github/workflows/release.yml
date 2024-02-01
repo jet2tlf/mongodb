@@ -2,8 +2,8 @@ name: Build Project
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - 'v*.*.*'
 
 jobs:
   build:
@@ -60,7 +60,7 @@ jobs:
         title: '${{ env.RELEASE_VERSION }}'
         prerelease: false
         files: mongodb.zip
-        
+
       env:
         CI: false
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
