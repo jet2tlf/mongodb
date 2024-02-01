@@ -58,7 +58,7 @@ jobs:
     - name: Bundle files
       run: |
         mkdir -p ./temp/mongodb
-        cp ./{LICENSE,README.md,fxmanifest.lua,ui.lua} ./temp/mongodb
+        cp ./{LICENSE,README.md,fxmanifest.lua} ./temp/mongodb
         cp -r ./dist ./temp/mongodb
         cd ./temp && zip -r ../mongodb.zip ./mongodb
 
