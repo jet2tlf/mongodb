@@ -58,12 +58,8 @@ jobs:
     - name: Bundle files
       run: |
         mkdir -p ./temp/mongodb
-        mkdir -p ./temp/mongodb/web/
-        mkdir -p ./temp/mongodb/lib/
         cp ./{LICENSE,README.md,fxmanifest.lua,ui.lua} ./temp/mongodb
-        cp ./lib/MySQL.lua ./temp/mongodb/lib
         cp -r ./dist ./temp/mongodb
-        cp -r ./web/build ./temp/mongodb/web/
         cd ./temp && zip -r ../mongodb.zip ./mongodb
 
     - name: Create Release
