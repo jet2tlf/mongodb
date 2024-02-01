@@ -23,8 +23,8 @@ jobs:
           cp -r ./dist ./temp/mongodb
           cd ./temp && zip -r ../mongodb.zip ./mongodb
 
-      - name: Save the build
-        uses: actions/upload-artifact@v2
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.3.0
         with:
           name: mongodb
           path: mongodb.zip
