@@ -13,6 +13,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      - name: Install Dependencies
+        run: yarn install
+      
+      - name: Build Project
+        run: yarn build
+
       - name: Bundle files
         run: |
           sudo apt install zip
