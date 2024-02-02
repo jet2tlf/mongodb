@@ -11,10 +11,11 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install Dependencies
         run: yarn install
+        
       
       - name: Build Project
         run: yarn build
@@ -28,7 +29,7 @@ jobs:
           cd ./temp && zip -r ../mongodb.zip ./mongodb
 
       - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: mongodb
           path: mongodb.zip
