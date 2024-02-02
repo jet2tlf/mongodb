@@ -18,7 +18,7 @@ Every callback accepts `result<object>` as it's first argument. If the execution
 
 Example (Lua):
 ```lua
-local result = exports["mongodb"]:findOne({ collection = "products" }, function(result)
+exports["mongodb"]:findOne({ collection = "products" }, function(result)
     if not result then return
 
     print("The first product is: "..result.name)
