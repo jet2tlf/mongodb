@@ -2,7 +2,7 @@ import { MongoConnection } from "../database"
 import { middleware } from "../utils/middleware"
 import { prepareObject } from "../utils/prepare"
 
-export async function findMany(params: any, callback: any) {
+export async function findMany(params: { collection: string, query: object, options?: object }, callback: any) {
     try {
         if (typeof callback !== "function") callback = null
 

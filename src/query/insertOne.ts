@@ -2,7 +2,7 @@ import { MongoConnection } from "../database"
 import { middleware } from "../utils/middleware"
 import { prepareObject } from "../utils/prepare"
 
-export async function insertOne(params: { collection: string }, callback: any) {
+export async function insertOne(params: { collection: string, document: object, options?: object }, callback: any) {
     try {
         if (typeof callback !== "function") callback = null
 
