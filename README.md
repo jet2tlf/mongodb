@@ -4,11 +4,11 @@ This resource is a simple MongoDB wrapper for [FiveM](https://fivem.net/). It's 
 
 ## Installation
 
-1. Clone this repository to `resources/mongodb` folder.
-2. Copy `mongodb/database.cfg` to your server root directory.
-3. Add the following lines to your server config:
+1. Download the [latest release](https://github.com/jet2tlf/mongodb/releases/latest).
+2. Add the following lines to your server config:
 ```
 set mongoCredentials "mongodb://yourhost:27017/yourdb"
+start mongodb
 ```
 3. Set your host and db
 
